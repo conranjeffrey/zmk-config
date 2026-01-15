@@ -28,6 +28,17 @@
             bindings = <&mo 1>, <&to 1>;
         };
 
+        windows_at: windows_at_macro {
+            compatible = "zmk,behavior-macro";
+            label = "W_AT";
+            #binding-cells = <0>;
+            bindings 
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N6 &kp KP_N4>
+                , <&macro_release &kp LALT>
+                ;
+        };
+
         windows_2: mod_morph_0 {
             compatible = "zmk, behavior-mod-morph";
             #binding-cells = <0>;
@@ -59,17 +70,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 3>;
-        };
-
-        windows_at: windows_at_macro {
-            compatible = "zmk,behavior-macro";
-            label = "W_AT";
-            #binding-cells = <0>;
-            bindings 
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_N6 &kp KP_N4>
-                , <&macro_release &kp LALT>
-                ;
         };
     };
 
