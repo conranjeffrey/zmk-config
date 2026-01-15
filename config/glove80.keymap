@@ -39,7 +39,7 @@
         };
 
         windows_2: windows_2 {
-            compatible = "zmk, behavior-mod-morph";
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N2>, <&windows_at>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
