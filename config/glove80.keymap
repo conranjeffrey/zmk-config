@@ -28,9 +28,8 @@
             bindings = <&mo 1>, <&to 1>;
         };
 
-        windows_at: windows_at_macro {
+        windows_at: windows_at {
             compatible = "zmk,behavior-macro";
-            label = "W_AT";
             #binding-cells = <0>;
             bindings 
                 = <&macro_press &kp LALT>
@@ -41,8 +40,9 @@
 
         windows_2: mod_morph_0 {
             compatible = "zmk, behavior-mod-morph";
+            label = "W_2";
             #binding-cells = <0>;
-            bindings = <&kp N2>, <&W_AT>;
+            bindings = <&kp N2>, <&windows_at>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -120,7 +120,7 @@
         Windows_Layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                                                                             &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &windows_2  &trans  &trans  &trans                                                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &W_2  &trans  &trans  &trans                                                             &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                             &trans  &trans  &trans  &trans  &trans  &kp NON_US_BACKSLASH
 &trans  &trans  &trans  &trans  &trans  &trans                                                             &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &trans    &kp RMETA  &kp RCTRL  &trans  &trans  &trans  &trans  &trans  &trans  &trans
