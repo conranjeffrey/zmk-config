@@ -31,7 +31,7 @@
         windows_2: mod_morph_0 {
             compatible = "zmk, behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N2>, <&windows_at>;
+            bindings = <&kp N2>, <&W_AT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -63,6 +63,7 @@
 
         windows_at: windows_at_macro {
             compatible = "zmk,behavior-macro";
+            label = "W_AT";
             #binding-cells = <0>;
             bindings 
                 = <&macro_press &kp LALT>
