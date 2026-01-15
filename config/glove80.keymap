@@ -31,17 +31,20 @@
         windows_at: windows_at {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings 
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_N6 &kp KP_N4>
-                , <&macro_release &kp LALT>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N6 &kp KP_N4>,
+                <&macro_release>,
+                <&kp LALT>;
         };
 
         windows_2: windows_2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N2>, <&windows_at>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -107,23 +110,23 @@
 
         magic_layer {
             bindings = <
-&bt BT_CLR   &none            &none            &none            &none                                                                                       &none  &none  &none  &none  &none
-&none        &none            &none            &none            &none            &none                                                               &none  &none  &none  &none  &none  &none
-&none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                     &none  &none  &none  &none  &none  &none
-&bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                     &none  &none  &none  &none  &none  &bootloader
-&sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none           &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset
-&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB    &none  &none  &none         &none  &none  &none  &none  &none
+&bt BT_CLR   &none            &none            &none            &none                                                                                        &none  &none  &none  &none  &none
+&none        &none            &none            &none            &none            &none                                                                &none  &none  &none  &none  &none  &none
+&none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                      &none  &none  &none  &none  &none  &none
+&bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                      &none  &none  &none  &none  &none  &bootloader
+&sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none           &tog 3  &none  &none  &none  &none  &none  &none  &none  &sys_reset
+&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB    &none   &none  &none         &none  &none  &none  &none  &none
             >;
         };
 
         Windows_Layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                             &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans      &trans  &trans                                                                             &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &windows_2  &trans  &trans  &trans                                                             &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                             &trans  &trans  &trans  &trans  &trans  &kp NON_US_BACKSLASH
-&trans  &trans  &trans  &trans  &trans  &trans                                                             &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &trans    &kp RMETA  &kp RCTRL  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans     &trans    &trans     &trans     &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans      &trans  &trans  &trans                                                             &trans  &trans  &trans  &trans  &trans  &kp NON_US_BACKSLASH
+&trans  &trans  &trans      &trans  &trans  &trans                                                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp LCTRL  &trans    &kp RMETA  &kp RCTRL  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans      &trans  &trans          &trans  &trans     &trans    &trans     &trans     &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
