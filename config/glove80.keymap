@@ -68,6 +68,7 @@
                 = <&macro_press &kp LALT>
                 , <&maceo_tap &kp KP_N6 &kp KP_N4>
                 , <&macro_release &kp LALT>
+                ;
         }:
     };
 
